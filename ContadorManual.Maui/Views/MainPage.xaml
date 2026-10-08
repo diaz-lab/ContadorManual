@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContadorManual.Maui.Views.MainPage"
+             Title="Contador Manual">
+    <StackLayout
+        Orientation="Vertical"
+        Spacing="12"
+        Margin="12,24,36,48"
+        Padding="12">
+        <Label Text="Conteo"
+               HorizontalOptions="Fill"
+               FontSize="Medium"/>
+        <Border
+            Stroke="Gray"
+            StrokeThickness="2">
+            <Label Text="5"
+                   Padding="0,24"
+                   HorizontalOptions="Center"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                     x:Name="ConteoLabel"/>
+        </Border>
+        <StackLayout
+            Orientation="Horizontal"
+            HorizontalOptions="Center"
+            Spacing="24"
+            Margin="0,24,0,0">
+            <Button Text="Contar"
+                    FontSize="Medium"
+                    Clicked="OnContarButton_Clicked"/>
+            <Button Text="Reiniciar"
+                    FontSize="Medium"
+                    Clicked="OnReiniciarButton_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
