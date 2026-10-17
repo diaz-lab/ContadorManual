@@ -14,13 +14,30 @@
         <Border
             Stroke="Gray"
             StrokeThickness="2">
-            <Label Text="5"
+            <Label 
+                   Text="{Binding Path=Conteo}"
                    Padding="0,24"
                    HorizontalOptions="Center"
                    FontSize="Large"
-                   FontAttributes="Bold"
-                     x:Name="ConteoLabel"/>
+                   FontAttributes="Bold"/>
         </Border>
+        
+        <HorizontalStackLayout
+            Spacing="8">
+            <Label
+                Text="Incrementar conteo pr:"
+                VerticalOptions="Center"/>
+            <Entry
+                Text="{Binding Source={x:Reference IncrementoStepper}, Path=Value}"
+                IsReadOnly="True"/>
+            <Stepper
+                Minimum="1"
+                Maximum="20"
+                Increment="1"
+                Value="{Binding Path=Incremento}"
+                x:Name="IncrementoStepper"/>
+        </HorizontalStackLayout>
+        
         <StackLayout
             Orientation="Horizontal"
             HorizontalOptions="Center"
